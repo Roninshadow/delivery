@@ -1,0 +1,130 @@
+/* Стили для страницы process */
+@use 'variables' as *;
+
+.Ronin-proccess {
+	padding: 60px 0;
+	.Ronin-container {
+		.Ronin-proccsess__title-wrapper {
+			display: flex;
+			align-items: center;
+			gap: 8px;
+			justify-content: center;
+			.Ronin-proccess__title {
+				@media (max-width: 480px) {
+					text-align: center;
+				}
+			}
+			.Ronin-process__title-icon {
+				@media (max-width: 768px) {
+					display: none;
+				}
+			}
+		}
+		.Ronin-process__subtitle {
+			text-align: center;
+			@include reg-18;
+			margin-top: 6px;
+			@media (max-width: 480px) {
+				text-align: center;
+			}
+		}
+		.Ronin-process__cards {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 30px;
+			margin-top: 30px;
+			@media (max-width: 1024px) {
+				grid-template-columns: 1fr;
+				br {
+					display: none;
+				}
+			}
+			.Ronin-process__card {
+				display: flex;
+				background: $white;
+				padding: 40px 30px;
+				position: relative;
+				max-height: 200px;
+				border-radius: 10px;
+				@media (max-width: 1024px) {
+					height: 160px;
+				}
+				@media (max-width: 480px) {
+					height: 140px;
+					padding-right: 100px;
+				}
+				@media (max-width: 415px) {
+					height: 140px;
+					padding-right: 60px;
+				}
+				.Ronin-process__card-text {
+					@include reg-22;
+					max-width: 500px;
+					@media (max-width: 480px) {
+						font-size: 18px;
+						margin-right: 40px;
+						margin-right: 40px;
+					}
+				}
+				.Ronin-process__card-image {
+					position: absolute;
+					right: 0;
+					top: 0;
+					max-width: 227px;
+					@media (max-width: 480px) {
+						max-width: 150px;
+					}
+					@media (max-width: 415px) {
+						max-width: 100px;
+					}
+				}
+				&:first-child {
+					.Ronin-process__card-image {
+						top: -12px;
+						@media (max-width: 480px) {
+							top: 10px;
+						}
+						@media (max-width: 415px) {
+							top: 25px;
+						}
+					}
+				}
+				&:nth-child(2) {
+					.Ronin-process__card-image {
+						top: -12px;
+						@media (max-width: 480px) {
+							top: 5px;
+						}
+						@media (max-width: 415px) {
+							top: 20px;
+						}
+						@media (max-width: 375px) {
+							top: 20px;
+						}
+					}
+				}
+				&:nth-child(3) {
+					.Ronin-process__card-image {
+						top: -5px;
+						@media (max-width: 480px) {
+							top: 5px;
+						}
+						@media (max-width: 415px) {
+							top: 30px;
+						}
+					}
+				}
+				&:nth-child(4) {
+					.Ronin-process__card-image {
+						@media (max-width: 480px) {
+							top: 5px;
+						}
+						@media (max-width: 415px) {
+							top: 40px;
+						}
+					}
+				}
+			}
+		}
+	}
+}

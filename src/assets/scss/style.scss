@@ -1,0 +1,47 @@
+@use 'variables' as *;
+@use 'sass:meta';
+@use 'reset';
+body {
+	line-height: 1;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 400;
+	background: $bg2;
+}
+.Ronin-scroll-block {
+	overflow: hidden;
+}
+.Ronin-container {
+	max-width: calc(1110px + 20px * 2);
+	margin: 0 auto;
+	box-sizing: border-box;
+	padding: 0 20px;
+}
+h1 {
+	font-size: 32px;
+	font-weight: 700;
+	@media (max-width: 480px) {
+		font-size: 24px;
+	}
+}
+h2 {
+	font-size: 40px;
+	font-weight: 700;
+	@media (max-width: 480px) {
+		font-size: 22px;
+	}
+}
+
+@include meta.load-css('footer');
+@include meta.load-css('header');
+@include meta.load-css('hero');
+@include meta.load-css('faq');
+@include meta.load-css('form');
+@include meta.load-css('graphics');
+@include meta.load-css('heroDelivery');
+@include meta.load-css('howDelivery');
+@include meta.load-css('plan');
+@include meta.load-css('pluses');
+@include meta.load-css('price');
+@include meta.load-css('process');
+@include meta.load-css('sale');
+@include meta.load-css('whoUse');

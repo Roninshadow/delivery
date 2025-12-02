@@ -1,0 +1,86 @@
+/* Стили для страницы pluses */
+@use 'variables' as *;
+
+.Ronin-pluses {
+	padding: 60px 0;
+	.Ronin-container {
+		.Ronin-pluses__title {
+			text-align: center;
+			@media (max-width: 480px) {
+				text-align: left;
+			}
+		}
+		.Ronin-pluses__subtitle {
+			text-align: center;
+			@include reg-18;
+			margin-top: 6px;
+			@media (max-width: 480px) {
+				text-align: left;
+			}
+		}
+		.Ronin-pluses__list {
+			counter-reset: counter;
+			display: flex;
+			gap: 15px;
+			margin-top: 35px;
+			@media (max-width: 480px) {
+				flex-direction: column;
+			}
+			.Ronin-pluses__item {
+				padding-left: 50px;
+				position: relative;
+
+				&::before {
+					content: counter(counter);
+					counter-increment: counter;
+					position: absolute;
+					font-size: 50px;
+					left: 0;
+					font-weight: 700;
+					top: 50%;
+					transform: translateY(-50%);
+					padding-right: 6px;
+					border-right: 2px solid $bg1;
+					@media (max-width: 480px) {
+						font-size: 40px;
+					}
+				}
+				&:first-child {
+					&::before {
+						padding-right: 13px;
+					}
+				}
+			}
+			.Ronin-pluses__item-tittle {
+				@include bold-22;
+				@media (max-width: 480px) {
+					font-size: 16px;
+				}
+			}
+			.Ronin-pluses__item-description {
+				@include reg-20;
+				@media (max-width: 480px) {
+					font-size: 14px;
+					margin-top: 6px;
+				}
+			}
+		}
+		.Ronin-pluses__subtext {
+			margin-top: 30px;
+			@include reg-14;
+		}
+		div {
+			text-align: center;
+			margin-top: 40px;
+			.Ronin-pluses__button {
+				@include main-btn;
+				&:hover {
+				}
+				&:active {
+				}
+				&:focus {
+				}
+			}
+		}
+	}
+}

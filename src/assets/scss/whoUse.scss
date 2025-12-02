@@ -1,0 +1,53 @@
+/* Стили для страницы whoUse */
+@use 'variables' as *;
+
+.Ronin-whoUse {
+	padding: 60px 0;
+	.Ronin-container {
+		.Ronin-whoUse__title {
+			text-align: center;
+			margin-bottom: 35px;
+			@media (max-width: 480px) {
+				text-align: left;
+			}
+		}
+		.Ronin-whoUse__list {
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-end;
+			@media (max-width: 480px) {
+				flex-direction: column;
+				align-items: start;
+				gap: 12px;
+				&:nth-child(2) {
+					.Ronin-whoUse__item-image {
+						max-width: 175px;
+					}
+				}
+			}
+			.Ronin-whoUse__item {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 10px;
+				@media (max-width: 480px) {
+					flex-direction: row;
+					align-items: center;
+				}
+			}
+			.Ronin-whoUse__item-image {
+				@media (max-width: 480px) {
+					max-width: 160px;
+				}
+			}
+			.Ronin-whoUse__item-text {
+				text-align: center;
+				@include reg-24;
+				font-weight: 500;
+				@media (max-width: 480px) {
+					font-size: 16px;
+				}
+			}
+		}
+	}
+}

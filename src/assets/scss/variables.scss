@@ -1,0 +1,63 @@
+$black: #000;
+$white: #fff;
+$bg1: #bfd0d9;
+$bg2: #f4f6fb;
+$red: #bd294b;
+
+@mixin reg-14 {
+	font-weight: 400;
+	font-size: 14px;
+	color: $black;
+}
+@mixin reg-16 {
+	font-weight: 500;
+	font-size: 16px;
+	color: $black;
+}
+@mixin reg-18 {
+	font-weight: 400;
+	font-size: 18px;
+	color: $black;
+}
+@mixin reg-20 {
+	font-weight: 400;
+	font-size: 20px;
+	color: $black;
+}
+@mixin reg-22 {
+	font-weight: 400;
+	font-size: 22px;
+	color: $black;
+}
+@mixin reg-24 {
+	font-weight: 400;
+	font-size: 24px;
+	color: $black;
+}
+@mixin bold-22 {
+	font-weight: 700;
+	font-size: 22px;
+	color: $black;
+}
+@mixin bold-28 {
+	font-weight: 700;
+	font-size: 28px;
+	color: $black;
+}
+@mixin bold-32 {
+	font-weight: 700;
+	font-size: 32px;
+	color: $black;
+}
+@mixin main-btn {
+	background: $red;
+	padding: 24px;
+	border-radius: 10px;
+	@include reg-24;
+	font-weight: 600;
+	color: $white;
+	@media (max-width: 768px) {
+		font-size: 18px;
+		width: 100%;
+	}
+}

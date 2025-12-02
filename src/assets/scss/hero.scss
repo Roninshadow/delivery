@@ -1,0 +1,84 @@
+@use 'variables' as *;
+
+.Ronin-hero {
+	background: $bg1;
+	padding: 93px 0;
+	.Ronin-container {
+		.Ronin-hero-wrapper {
+			display: flex;
+			@media (max-width: 1024px) {
+				flex-direction: column;
+			}
+			.Ronin-hero__content {
+				.Ronin-hero__title {
+					font-size: 45px;
+					white-space: nowrap;
+					@media (max-width: 480px) {
+						white-space: wrap;
+						font-size: 35px;
+						br {
+							display: none;
+						}
+					}
+				}
+				.Ronin-hero__subtitle {
+					@include reg-18;
+					margin-top: 15px;
+				}
+				.Ronin-hero__description {
+					@include bold-28;
+					font-size: 20px;
+					margin-top: 30px;
+					margin-bottom: 15px;
+				}
+				.Ronin-hero__whoWork {
+					@include reg-18;
+				}
+				.Ronin-hero__whoWork-list {
+					display: flex;
+					gap: 20px;
+					margin-top: 12px;
+					@media (max-width: 415px) {
+						flex-direction: column;
+						align-items: flex-start;
+					}
+					.Ronin-hero__whoWork-item {
+						display: flex;
+						flex-direction: column;
+						align-items: center;
+						gap: 6px;
+						@media (max-width: 415px) {
+							align-items: flex-start;
+						}
+					}
+					.Ronin-hero__whoWrk-item-image {
+						width: 60px;
+						height: 60px;
+					}
+					.Ronin-hero__whoWork-item-link {
+						@include reg-14;
+						color: $red;
+						padding-right: 30px;
+						position: relative;
+						white-space: nowrap;
+						&::after {
+							content: '';
+							background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTkiIHZpZXdCb3g9IjAgMCAxOCAxOSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEwLjgyMjUgNC40ODQ4NkwxNS4zNzUgOS4wMzcyNkwxMC44MjI1IDEzLjU4OTkiIHN0cm9rZT0iI0JEMjk0QiIgc3Ryb2tlLXdpZHRoPSIxLjUiIHN0cm9rZS1taXRlcmxpbWl0PSIxMCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+CjxwYXRoIGQ9Ik0yLjYyNSA5LjAzNzM1SDE1LjI0NzUiIHN0cm9rZT0iI0JEMjk0QiIgc3Ryb2tlLXdpZHRoPSIxLjUiIHN0cm9rZS1taXRlcmxpbWl0PSIxMCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+Cjwvc3ZnPg==');
+							position: absolute;
+							right: 0;
+							top: 50%;
+							transform: translateY(-50%);
+							width: 18px;
+							height: 18px;
+						}
+					}
+				}
+				.Ronin-hero__whoWork-btn {
+					@include main-btn;
+					font-size: 16px;
+					margin-top: 40px;
+				}
+			}
+		}
+	}
+}

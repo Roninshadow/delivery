@@ -1,0 +1,92 @@
+/* Стили для страницы howDelivery */
+@use 'variables' as *;
+
+.Ronin-howDelivery {
+	padding: 60px 0;
+	.Ronin-container {
+		.Ronin-howDelivery__title {
+		}
+		.Ronin-howDelivery__subtitle {
+			display: flex;
+			align-items: center;
+			gap: 20px;
+			@include reg-18;
+			color: $red;
+		}
+		.Ronin-howDelivery__list {
+			display: flex;
+			gap: 30px;
+			@media (max-width: 768px) {
+				flex-direction: column;
+				gap: 72px;
+				background: $white;
+				margin-top: 24px;
+				border-radius: 10px;
+				padding: 20px;
+			}
+			.Ronin-howDelivery__title-list {
+				display: none;
+				@media (max-width: 768px) {
+					display: block;
+				}
+			}
+			.Ronin-howDelivery__item {
+				max-width: 160px;
+				position: relative;
+				@media (max-width: 768px) {
+					display: flex;
+					max-width: none;
+					align-items: center;
+					gap: 12px;
+
+					&::after {
+						content: '';
+						background-image: url("data:image/svg+xml,%3Csvg width='32' height='33' viewBox='0 0 32 33' fill='none' xmlns='http://www.Ronin-w3.Ronin-org/2000/svg'%3E%3Cpath d='M24.0934 20.1589L16 28.2523L7.90672 20.1589' stroke='%23292D32' stroke-width='1.5' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M16 5.58569L16 28.0257' stroke='%23292D32' stroke-width='1.5' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+						width: 32px;
+						height: 33px;
+						display: inline-block;
+						position: absolute;
+						top: 70px;
+						left: 10px;
+					}
+					&:last-child {
+						&::after {
+							background-image: none;
+						}
+					}
+				}
+			}
+			.Ronin-howDelivery__icons {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+
+				.Ronin-arrow {
+					@media (max-width: 768px) {
+						display: none;
+					}
+				}
+			}
+			.Ronin-howDelivery__text {
+				@include reg-14;
+				font-weight: 500;
+			}
+		}
+		.Ronin-btn-wrapper {
+			text-align: center;
+			margin-top: 40px;
+			@media (max-width: 768px) {
+				margin-top: 24px;
+			}
+			.Ronin-howDelivery__btn {
+				@include main-btn;
+				&:hover {
+				}
+				&:active {
+				}
+				&:focus {
+				}
+			}
+		}
+	}
+}

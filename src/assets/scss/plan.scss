@@ -1,0 +1,239 @@
+/* Стили для страницы plan */
+@use 'variables' as *;
+
+.Ronin-plan {
+	padding: 60px 0;
+	.Ronin-container {
+		.Ronin-plan__title {
+			text-align: center;
+		}
+		.Ronin-plan__subtitle {
+			text-align: center;
+			@include reg-18;
+			margin-top: 6px;
+		}
+		.Ronin-plan__tabs {
+			display: flex;
+			justify-content: center;
+			margin-top: 35px;
+			align-items: center;
+			margin-bottom: 25px;
+			.Ronin-plan__tab.Ronin-active {
+				background: $red;
+				color: $white;
+			}
+			.Ronin-plan__tab {
+				background: $white;
+				padding: 10px;
+				cursor: pointer;
+				border-top: 3px solid $red;
+			}
+			.Ronin-FBO {
+				border-top-left-radius: 10px;
+				border-bottom-left-radius: 10px;
+			}
+			.Ronin-FBS {
+				border-bottom-right-radius: 10px;
+				border-top-right-radius: 10px;
+			}
+		}
+		.Ronin-plan__tabDisplays {
+			background: $white;
+			padding: 20px 105px 20px 95px;
+			border-top-right-radius: 10px;
+			border-top-left-radius: 10px;
+			@media (max-width: 768px) {
+				padding: 20px;
+			}
+			.Ronin-plan__tabDisplay-fbo {
+				display: none;
+				.Ronin-plan__tabDisplay-fbo-contentContainer {
+					display: flex;
+					align-items: center;
+					gap: 46px;
+
+					.Ronin-plan__tabDisplay-fbo-contentContainer-content {
+						.Ronin-plan__tabDisplay-fbo-processList {
+							display: flex;
+							gap: 20px;
+							align-items: flex-end;
+							@media (max-width: 768px) {
+								flex-direction: column;
+								align-items: flex-start;
+								gap: 72px;
+								margin-top: 24px;
+							}
+							.Ronin-plan__tabDisplay-fbo-processItem {
+								max-width: 200px;
+								@media (max-width: 768px) {
+									display: flex;
+									max-width: none;
+									align-items: center;
+									gap: 12px;
+									position: relative;
+									&:not(:last-child):after {
+										content: '';
+										background-image: url("data:image/svg+xml,%3Csvg width='32' height='33' viewBox='0 0 32 33' fill='none' xmlns='http://www.Ronin-w3.Ronin-org/2000/svg'%3E%3Cpath d='M24.0934 20.1589L16 28.2523L7.90672 20.1589' stroke='%23292D32' stroke-width='1.5' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M16 5.58569L16 28.0257' stroke='%23292D32' stroke-width='1.5' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+										width: 32px;
+										height: 33px;
+										display: inline-block;
+										position: absolute;
+										top: 70px;
+										left: 10px;
+									}
+								}
+							}
+							.Ronin-plan__tabDisplay-fbo-processItem-images {
+								display: flex;
+								justify-content: space-between;
+								align-items: center;
+								margin-bottom: 12px;
+								svg {
+								}
+								.Ronin-arrow-plan {
+									@media (max-width: 768px) {
+										display: none;
+									}
+								}
+							}
+							.Ronin-plan__tabDisplay-fbo-processItem-text {
+								@include reg-14;
+								font-weight: 500;
+							}
+						}
+						.Ronin-plan__tabDisplay-fbo-contentContainer-image-mobile {
+							display: none;
+							margin: 0 auto;
+							@media (max-width: 768px) {
+								display: block;
+							}
+						}
+					}
+					.Ronin-plan__tabDisplay-fbo-contentContainer-image {
+						@media (max-width: 768px) {
+							display: none;
+						}
+					}
+				}
+			}
+			.Ronin-plan__tabDisplay-fbs {
+				display: none;
+				.Ronin-plan__tabDisplay-fbs-processList {
+					display: flex;
+					margin-top: 30px;
+					gap: 20px;
+					@media (max-width: 768px) {
+						flex-direction: column;
+						gap: 72px;
+					}
+					.Ronin-plan__tabDisplay-fbs-processItem {
+						@media (max-width: 768px) {
+							display: flex;
+							align-items: center;
+							gap: 12px;
+							position: relative;
+							&:not(:last-child):after {
+								content: '';
+								background-image: url("data:image/svg+xml,%3Csvg width='32' height='33' viewBox='0 0 32 33' fill='none' xmlns='http://www.Ronin-w3.Ronin-org/2000/svg'%3E%3Cpath d='M24.0934 20.1589L16 28.2523L7.90672 20.1589' stroke='%23292D32' stroke-width='1.5' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M16 5.58569L16 28.0257' stroke='%23292D32' stroke-width='1.5' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+								width: 32px;
+								height: 33px;
+								display: inline-block;
+								position: absolute;
+								top: 70px;
+								left: 10px;
+							}
+						}
+						.Ronin-plan__tabDisplay-fbs-processItem-icons {
+							display: flex;
+							align-items: center;
+							justify-content: space-between;
+							.Ronin-arrow-plan {
+								@media (max-width: 768px) {
+									display: none;
+								}
+							}
+						}
+						.Ronin-plan__tabDisplay-fbs-processItem-text {
+							@include reg-14;
+							font-weight: 500;
+							max-width: 200px;
+						}
+					}
+				}
+			}
+		}
+		.Ronin-plan__moreOptions {
+			background: $bg1;
+			padding: 20px;
+			padding-left: 95px;
+			padding-right: 38px;
+			border-bottom-right-radius: 10px;
+			border-bottom-left-radius: 10px;
+			@media (max-width: 768px) {
+				padding: 20px;
+			}
+			.Ronin-plan__moreOptions-title {
+				@include reg-24;
+				font-weight: 500;
+			}
+			.Ronin-plan__moreOptions-list {
+				display: flex;
+				justify-content: space-between;
+				margin-top: 18px;
+				@media (max-width: 480px) {
+					display: grid;
+					grid-template-columns: 1fr 1fr;
+					gap: 13px;
+					row-gap: 20px;
+				}
+				.Ronin-plan__moreOptions-item {
+					@include reg-14;
+					font-weight: 700;
+				}
+			}
+		}
+	}
+}
+.Ronin-plan__tabDisplay-fbo-pluses-title {
+	@include reg-24;
+	font-weight: 500;
+	margin-top: 40px;
+}
+.Ronin-plan__tabDisplay-plusesList {
+	margin-top: 34px;
+	display: flex;
+	gap: 25px;
+	@media (max-width: 480px) {
+		flex-direction: column;
+	}
+	.Ronin-plan__tabDisplay-pluses-item {
+		padding-top: 16px;
+		max-width: 200px;
+		@include reg-16;
+		font-weight: 500;
+		position: relative;
+		@media (max-width: 480px) {
+			padding-left: 42px;
+			max-width: none;
+		}
+		&::before {
+			content: '';
+			height: 2px;
+			width: 65px;
+			background: $red;
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			@media (max-width: 480px) {
+				height: 4px;
+				width: 30px;
+				top: 50%;
+				transform: translateY(-50%);
+			}
+		}
+	}
+}
+.Ronin-active-plan {
+	display: block !important;
+}

@@ -1,0 +1,94 @@
+/* Стили для страницы faq */
+@use 'variables' as *;
+
+// .Ronin-faq {
+// 	.Ronin-container {
+// 		.Ronin-faq__title {
+// 			text-align: center;
+// 			margin-bottom: 50px;
+// 		}
+// 		.Ronin-faq__list {
+// 			.Ronin-faq__item {
+// 				display: flex;
+// 				align-items: center;
+// 				justify-content: space-between;
+// 				border-bottom: 1px solid $bg1;
+// 				padding: 22px 0;
+// 				cursor: pointer;
+// 				&:first-child {
+// 					border-top: 1px solid $bg1;
+// 				}
+// 			}
+// 			.Ronin-faq__question {
+// 			}
+// 			svg {
+// 				use {
+// 				}
+// 			}
+// 		}
+// 	}
+// }
+
+.Ronin-faq {
+	.Ronin-container {
+		.Ronin-faq__title {
+		}
+		.Ronin-faq__list {
+			.Ronin-faq__item {
+				border-bottom: 1px solid $bg1;
+				.Ronin-faq-wrapper {
+					display: flex;
+					align-items: center;
+					justify-content: space-between;
+					padding: 22px 0;
+					cursor: pointer;
+					.Ronin-faq__question {
+					}
+					.Ronin-plus {
+					}
+					use {
+					}
+				}
+				.Ronin-faq__answer {
+					padding: 0;
+					max-height: 0;
+					overflow: hidden;
+					li {
+					}
+				}
+			}
+			.Ronin-faq__item.Ronin-open {
+				.Ronin-faq-wrapper {
+					.Ronin-faq__question {
+					}
+					.Ronin-plus {
+						rotate: 45deg;
+					}
+					use {
+					}
+				}
+				.Ronin-faq__answer {
+					max-height: 500px;
+					padding: 24px 0;
+					overflow: visible;
+					li {
+						margin-bottom: 2px;
+						position: relative;
+						padding-left: 20px;
+						&::before {
+							content: '';
+							position: absolute;
+							width: 2px;
+							height: 2px;
+							border-radius: 10px;
+							background: $black;
+							left: 10px;
+							top: 50%;
+							transform: translateY(-50%);
+						}
+					}
+				}
+			}
+		}
+	}
+}

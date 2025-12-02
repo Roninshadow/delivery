@@ -1,0 +1,141 @@
+/* Стили для страницы price */
+@use 'variables' as *;
+
+.Ronin-price {
+	padding: 60px 0;
+	.Ronin-container {
+		.Ronin-price__title {
+			text-align: center;
+		}
+		.Ronin-price__subtitle {
+			@include reg-18;
+			text-align: center;
+			margin-top: 6px;
+			margin-bottom: 35px;
+		}
+		.Ronin-price__table {
+			border-radius: 10px;
+			overflow: hidden;
+			table-layout: fixed;
+			white-space: nowrap;
+			@media (max-width: 768px) {
+				display: none;
+			}
+			.Ronin-price__table-title {
+				padding: 10px;
+				text-align: center;
+				background: $bg1;
+				@include reg-18;
+				&:first-child {
+					width: 450px;
+				}
+			}
+			.Ronin-price_table-row {
+				border-bottom: 1px solid $bg1;
+				.Ronin-price__table-item {
+					background: $white;
+					text-align: center;
+
+					@include bold-28;
+					&:has(.Ronin-price__table-item-city) {
+						display: flex;
+						justify-content: space-between;
+						width: 450px;
+						align-items: center;
+						.Ronin-price__table-item-city {
+							@include reg-24;
+							padding: 10px;
+							padding-left: 25px;
+							padding-right: 0;
+						}
+					}
+				}
+			}
+		}
+
+		.Ronin-price__mobTable {
+			border-radius: 10px;
+			overflow: hidden;
+			display: none;
+			@media (max-width: 480px) {
+				display: block;
+			}
+			.Ronin-price__mobTable-names {
+				background: $bg1;
+				padding: 10px 16px;
+				display: flex;
+				.Ronin-price__mobTable-name {
+				}
+			}
+			.Ronin-price__mobTable-list {
+				background: $white;
+				.Ronin-price__mobTable-item {
+					padding: 10px 16px;
+					border-bottom: 1px solid $bg1;
+					.Ronin-price__mobTable-path {
+						display: flex;
+						justify-content: space-between;
+						align-items: center;
+						margin-bottom: 10px;
+						.Ronin-price__mobTable-pathName {
+							@include reg-14;
+						}
+						.Ronin-price__mobTable-icon {
+							width: 23px;
+							height: 23px;
+						}
+					}
+					.Ronin-price__mobTable-wrapper {
+						display: flex;
+						justify-content: space-between;
+						.Ronin-price__mobTable-price {
+							@include bold-28;
+							font-size: 20px;
+						}
+						.Ronin-price__mobTable-deadline {
+							padding-right: 130px;
+							@include bold-28;
+							font-size: 20px;
+							@media (max-width: 480px) {
+								padding-right: 90px;
+							}
+						}
+					}
+				}
+				.Ronin-price__table-item-image {
+					width: 32px;
+					height: 32px;
+				}
+			}
+		}
+		.Ronin-price__comment {
+			margin-top: 24px;
+			@include reg-14;
+		}
+		.Ronin-price__button-container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			margin-top: 50px;
+			.Ronin-price__btn {
+				@include main-btn;
+				@include reg-24;
+				font-weight: 600;
+				color: $white;
+				border-radius: 10px;
+
+				&:hover {
+				}
+				&:active {
+				}
+				&:focus {
+				}
+			}
+			.Ronin-price__subbutton {
+				@include reg-14;
+				margin-top: 8px;
+			}
+		}
+	}
+}

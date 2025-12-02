@@ -1,0 +1,88 @@
+/* Стили для страницы heroDelivery */
+@use 'variables' as *;
+
+.Ronin-heroDelivery {
+	background: $bg1;
+	padding: 60px 0;
+	.Ronin-container {
+		.Ronin-heroDelivery__wrapper {
+			display: flex;
+			background: $white;
+			border-radius: 10px;
+			@media (max-width: 768px) {
+				flex-direction: column;
+				align-items: center;
+			}
+			.Ronin-heroDelivery__content {
+				padding: 70px;
+				padding-left: 40px;
+				padding-right: 0;
+				@media (max-width: 768px) {
+					padding: 10px 0;
+				}
+			}
+			.Ronin-heroDelivery__image {
+				display: block;
+				@media (max-width: 480px) {
+					display: none;
+				}
+			}
+			.Ronin-heroDelivery__image-mobile {
+				display: none;
+				@media (max-width: 480px) {
+					display: block;
+					width: 100%;
+					margin-top: 20px;
+				}
+			}
+			.Ronin-heroDelivery__title {
+				@media (max-width: 768px) {
+					text-align: center;
+				}
+			}
+			.Ronin-heroDelivery__subtitle {
+				margin-top: 8px;
+				@include reg-24;
+				@media (max-width: 768px) {
+					text-align: center;
+				}
+				@media (max-width: 480px) {
+					font-size: 20px;
+				}
+
+				span {
+					font-weight: 700;
+				}
+			}
+			.Ronin-heroDelivery__btn {
+				@include main-btn;
+				font-size: 16px;
+				margin-top: 30px;
+				@media (max-width: 768px) {
+					width: 100%;
+				}
+			}
+			.Ronin-heroDelivery__subtext {
+				font-size: 8px;
+				font-weight: 400;
+				margin-top: 30px;
+				color: rgba(#000, 0.6);
+				@media (max-width: 768px) {
+					display: none;
+				}
+			}
+			.Ronin-heroDelivery__subtext-mobile {
+				font-size: 8px;
+				font-weight: 400;
+				margin-top: 20px;
+				color: rgba(#000, 0.6);
+				display: none;
+				text-align: center;
+				margin-bottom: 10px;
+				@media (max-width: 768px) {
+					display: block;
+				}
+			}
+		}
+	}
+}
